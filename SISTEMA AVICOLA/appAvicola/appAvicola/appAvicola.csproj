@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAA67B50-D613-4C8D-BBC4-9E02BE5D2473}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>appAvicola</RootNamespace>
+    <AssemblyName>appAvicola</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.15\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms R2 2017\Bin40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Material, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms R2 2017\Bin40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms R2 2017\Bin40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mvc\Vista\reporte\RptComprobante.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptComprobante.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mvc\Clases\Almacen.cs" />
+    <Compile Include="Mvc\Clases\Categoria.cs" />
+    <Compile Include="Mvc\Clases\Cliente.cs" />
+    <Compile Include="Mvc\Clases\Cobro.cs" />
+    <Compile Include="Mvc\Clases\Comprobante.cs" />
+    <Compile Include="Mvc\Clases\DetalleComprobante.cs" />
+    <Compile Include="Mvc\Clases\Deuda.cs" />
+    <Compile Include="Mvc\Clases\Empresa.cs" />
+    <Compile Include="Mvc\Clases\Moneda.cs" />
+    <Compile Include="Mvc\Clases\Precio.cs" />
+    <Compile Include="Mvc\Clases\Producto.cs" />
+    <Compile Include="Mvc\Clases\Serie.cs" />
+    <Compile Include="Mvc\Clases\Sesion.cs" />
+    <Compile Include="Mvc\Clases\Sucursal.cs" />
+    <Compile Include="Mvc\Clases\TipoCobro.cs" />
+    <Compile Include="Mvc\Clases\TipoComprobante.cs" />
+    <Compile Include="Mvc\Clases\TipoDocumento.cs" />
+    <Compile Include="Mvc\Clases\TipoPago.cs" />
+    <Compile Include="Mvc\Clases\TipoPrecio.cs" />
+    <Compile Include="Mvc\Clases\TipoUnidad.cs" />
+    <Compile Include="Mvc\Clases\TipoUsuario.cs" />
+    <Compile Include="Mvc\Clases\UnidadEquivalente.cs" />
+    <Compile Include="Mvc\Clases\UnidadMedida.cs" />
+    <Compile Include="Mvc\Clases\Usuario.cs" />
+    <Compile Include="Mvc\Controlador\CAlmacen.cs" />
+    <Compile Include="Mvc\Controlador\CCategoria.cs" />
+    <Compile Include="Mvc\Controlador\CCliente.cs" />
+    <Compile Include="Mvc\Controlador\CCobro.cs" />
+    <Compile Include="Mvc\Controlador\CComprobante.cs" />
+    <Compile Include="Mvc\Controlador\CDeuda.cs" />
+    <Compile Include="Mvc\Controlador\CEmpresa.cs" />
+    <Compile Include="Mvc\Controlador\CControl.cs" />
+    <Compile Include="Mvc\Controlador\CMoneda.cs" />
+    <Compile Include="Mvc\Controlador\CPrecio.cs" />
+    <Compile Include="Mvc\Controlador\CProducto.cs" />
+    <Compile Include="Mvc\Controlador\CSerie.cs" />
+    <Compile Include="Mvc\Controlador\CSucursal.cs" />
+    <Compile Include="Mvc\Controlador\CTipoCobro.cs" />
+    <Compile Include="Mvc\Controlador\CTipoComprobante.cs" />
+    <Compile Include="Mvc\Controlador\CTipoDocumento.cs" />
+    <Compile Include="Mvc\Controlador\CTipoPago.cs" />
+    <Compile Include="Mvc\Controlador\CTipoPrecio.cs" />
+    <Compile Include="Mvc\Controlador\CTipoUnidad.cs" />
+    <Compile Include="Mvc\Controlador\CTipoUsuario.cs" />
+    <Compile Include="Mvc\Controlador\CUnidadEquivalente.cs" />
+    <Compile Include="Mvc\Controlador\CUnidadMedida.cs" />
+    <Compile Include="Mvc\Controlador\CUsuario.cs" />
+    <Compile Include="Mvc\Modelo\Bd\Bd.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\IAlmacen.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\ICategoria.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\ICliente.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\ICobro.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\IComprobante.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\IDeuda.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\IEmpresa.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\IMoneda.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\IPrecio.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\IProducto.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\ISerie.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\ISucursal.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\ITipoCobro.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\ITipoComprobante.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\ITipoDocumento.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\ITipoPago.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\ITipoPrecio.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\ITipoUnidad.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\ITipoUsuario.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\IUnidadEquivalente.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\IUnidadMedida.cs" />
+    <Compile Include="Mvc\Modelo\Interfaz\IUsuario.cs" />
+    <Compile Include="Mvc\Modelo\MAlmacen.cs" />
+    <Compile Include="Mvc\Modelo\MCategoria.cs" />
+    <Compile Include="Mvc\Modelo\MCliente.cs" />
+    <Compile Include="Mvc\Modelo\MCobro.cs" />
+    <Compile Include="Mvc\Modelo\MComprobante.cs" />
+    <Compile Include="Mvc\Modelo\MDeuda.cs" />
+    <Compile Include="Mvc\Modelo\MEmpresa.cs" />
+    <Compile Include="Mvc\Modelo\MMoneda.cs" />
+    <Compile Include="Mvc\Modelo\MPrecio.cs" />
+    <Compile Include="Mvc\Modelo\MProducto.cs" />
+    <Compile Include="Mvc\Modelo\MSerie.cs" />
+    <Compile Include="Mvc\Modelo\MSucursal.cs" />
+    <Compile Include="Mvc\Modelo\MTipoCobro.cs" />
+    <Compile Include="Mvc\Modelo\MTipoComprobante.cs" />
+    <Compile Include="Mvc\Modelo\MTipoDocumento.cs" />
+    <Compile Include="Mvc\Modelo\MTipoPago.cs" />
+    <Compile Include="Mvc\Modelo\MTipoPrecio.cs" />
+    <Compile Include="Mvc\Modelo\MTipoUnidad.cs" />
+    <Compile Include="Mvc\Modelo\MTipoUsuario.cs" />
+    <Compile Include="Mvc\Modelo\MUnidadEquivalente.cs" />
+    <Compile Include="Mvc\Modelo\MUnidadMedida.cs" />
+    <Compile Include="Mvc\Modelo\MUsuario.cs" />
+    <Compile Include="Mvc\Vista\administrador\RadFormAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormAlmacen.Designer.cs">
+      <DependentUpon>RadFormAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormCategoria.Designer.cs">
+      <DependentUpon>RadFormCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormCobro.Designer.cs">
+      <DependentUpon>RadFormCobro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormComprobante.Designer.cs">
+      <DependentUpon>RadFormComprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormDeudaporCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\.Designer.cs">
+      <DependentUpon>RadFormDeudaporCliente.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormEmpresa.Designer.cs">
+      <DependentUpon>RadFormEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormListadeCobros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormListadeCobros.Designer.cs">
+      <DependentUpon>RadFormListadeCobros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormListadeCobrosxDeuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormListadeCobrosxDeuda.Designer.cs">
+      <DependentUpon>RadFormListadeCobrosxDeuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormListadeComprobantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormListadeComprobantes.Designer.cs">
+      <DependentUpon>RadFormListadeComprobantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormListadeComprobantesporCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormListadeComprobantesporCliente.Designer.cs">
+      <DependentUpon>RadFormListadeComprobantesporCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormPrecio.Designer.cs">
+      <DependentUpon>RadFormPrecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormPrincipal.Designer.cs">
+      <DependentUpon>RadFormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormProducto.Designer.cs">
+      <DependentUpon>RadFormProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormSerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormSerie.Designer.cs">
+      <DependentUpon>RadFormSerie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormSucursal.Designer.cs">
+      <DependentUpon>RadFormSucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormTipoComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormTipoComprobante.Designer.cs">
+      <DependentUpon>RadFormTipoComprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormUnidadEquivalente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormUnidadEquivalente.Designer.cs">
+      <DependentUpon>RadFormUnidadEquivalente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormUnidadMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormUnidadMedida.Designer.cs">
+      <DependentUpon>RadFormUnidadMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormUsuario.Designer.cs">
+      <DependentUpon>RadFormUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormUsuarioAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormUsuarioAlmacen.Designer.cs">
+      <DependentUpon>RadFormUsuarioAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\administrador\RadFormCliente.Designer.cs">
+      <DependentUpon>RadFormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\RadFormInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\RadFormInicio.Designer.cs">
+      <DependentUpon>RadFormInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvc\Vista\reporte\CrystalReportComprobante.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportComprobante.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\reporte\RadFormImprimirComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvc\Vista\reporte\RadFormImprimirComprobante.Designer.cs">
+      <DependentUpon>RadFormImprimirComprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Mvc\Vista\reporte\RptComprobante.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptComprobante.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormAlmacen.resx">
+      <DependentUpon>RadFormAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormCategoria.resx">
+      <DependentUpon>RadFormCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormCobro.resx">
+      <DependentUpon>RadFormCobro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormComprobante.resx">
+      <DependentUpon>RadFormComprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormDeudaporCliente.resx">
+      <DependentUpon>RadFormDeudaporCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormEmpresa.resx">
+      <DependentUpon>RadFormEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormListadeCobros.resx">
+      <DependentUpon>RadFormListadeCobros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormListadeCobrosxDeuda.resx">
+      <DependentUpon>RadFormListadeCobrosxDeuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormListadeComprobantes.resx">
+      <DependentUpon>RadFormListadeComprobantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormListadeComprobantesporCliente.resx">
+      <DependentUpon>RadFormListadeComprobantesporCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormPrecio.resx">
+      <DependentUpon>RadFormPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormPrincipal.resx">
+      <DependentUpon>RadFormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormProducto.resx">
+      <DependentUpon>RadFormProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormSerie.resx">
+      <DependentUpon>RadFormSerie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormSucursal.resx">
+      <DependentUpon>RadFormSucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormTipoComprobante.resx">
+      <DependentUpon>RadFormTipoComprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormUnidadEquivalente.resx">
+      <DependentUpon>RadFormUnidadEquivalente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormUnidadMedida.resx">
+      <DependentUpon>RadFormUnidadMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormUsuario.resx">
+      <DependentUpon>RadFormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormUsuarioAlmacen.resx">
+      <DependentUpon>RadFormUsuarioAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\administrador\RadFormCliente.resx">
+      <DependentUpon>RadFormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\RadFormInicio.resx">
+      <DependentUpon>RadFormInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\reporte\CrystalReportComprobante.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportComprobante.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mvc\Vista\reporte\RadFormImprimirComprobante.resx">
+      <DependentUpon>RadFormImprimirComprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar_01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descargar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servicio1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servicio2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quitar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balanza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cobro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impresora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redondeo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="comprobante">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="item" type="xs:long" minOccurs="0" />
+                <xs:element name="erazonsocial" type="xs:string" minOccurs="0" />
+                <xs:element name="ruc" type="xs:string" minOccurs="0" />
+                <xs:element name="direccion" type="xs:string" minOccurs="0" />
+                <xs:element name="etelefono" type="xs:string" minOccurs="0" />
+                <xs:element name="tnombre" type="xs:string" minOccurs="0" />
+                <xs:element name="nserie" type="xs:string" minOccurs="0" />
+                <xs:element name="ncorrelativo" type="xs:string" minOccurs="0" />
+                <xs:element name="ncomprobante" type="xs:string" minOccurs="0" />
+                <xs:element name="clirazonsocial" type="xs:string" minOccurs="0" />
+                <xs:element name="fechaemision" type="xs:string" minOccurs="0" />
+                <xs:element name="nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="nunidad" type="xs:decimal" minOccurs="0" />
+                <xs:element name="pbruto" type="xs:decimal" minOccurs="0" />
+                <xs:element name="ptara" type="xs:decimal" minOccurs="0" />
+                <xs:element name="pneto" type="xs:decimal" minOccurs="0" />
+                <xs:element name="preciounitario" type="xs:decimal" minOccurs="0" />
+                <xs:element name="total" type="xs:decimal" minOccurs="0" />
+                <xs:element name="estado" type="xs:string" minOccurs="0" />
+                <xs:element name="_saldoanterior" type="xs:decimal" minOccurs="0" />
+                <xs:element name="_cuentatotal" type="xs:decimal" minOccurs="0" />
+                <xs:element name="_acuenta" type="xs:decimal" minOccurs="0" />
+                <xs:element name="_saldo" type="xs:decimal" minOccurs="0" />
+                <xs:element name="norden" type="xs:int" minOccurs="0" />
+                <xs:element name="nombreyapellido" type="xs:string" minOccurs="0" />
+                <xs:element name="glosa" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <comprobante>
+    <item>1</item>
+    <erazonsocial>PROCESADORA AVICOLA NANDO´S</erazonsocial>
+    <ruc>20561278441</ruc>
+    <direccion>HU. SAN BORJA MZ D LT 30  ( AV. AGRICULTURA  KM 5 ) </direccion>
+    <etelefono>074-236915 / 964518732 / 964513149</etelefono>
+    <tnombre>NOTA DE VENTA :</tnombre>
+    <nserie>0001</nserie>
+    <ncorrelativo>00000017</ncorrelativo>
+    <ncomprobante>0001-00000017</ncomprobante>
+    <clirazonsocial>CESAR MALDONADO </clirazonsocial>
+    <fechaemision>03/07/2019</fechaemision>
+    <nombre>POLLO BENEFICIADO CARNE</nombre>
+    <nunidad>800.0000</nunidad>
+    <pbruto>1952.4000</pbruto>
+    <ptara>102.5000</ptara>
+    <pneto>1849.9000</pneto>
+    <preciounitario>3.8000</preciounitario>
+    <total>7029.6200</total>
+    <estado>ANULADO</estado>
+    <_saldoanterior>0.0000</_saldoanterior>
+    <_cuentatotal>0.0000</_cuentatotal>
+    <_acuenta>0.0000</_acuenta>
+    <_saldo>0.0000</_saldo>
+    <norden>3</norden>
+    <nombreyapellido>ADMIN</nombreyapellido>
+    <glosa />
+  </comprobante>
+</NewDataSet>
