@@ -77,6 +77,8 @@
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.radGridView_producto = new Telerik.WinControls.UI.RadGridView();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.txtOrden = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             this.radDrop_unidad = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radButton_cancelar = new Telerik.WinControls.UI.RadButton();
@@ -91,8 +93,6 @@
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radText_cod = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
-            this.txtOrden = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
@@ -114,6 +114,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView_producto.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOrden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDrop_unidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton_cancelar)).BeginInit();
@@ -128,8 +130,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radText_cod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOrden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,20 +167,20 @@
             this.radLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel7.ForeColor = System.Drawing.Color.Green;
-            this.radLabel7.Location = new System.Drawing.Point(550, 192);
+            this.radLabel7.Location = new System.Drawing.Point(522, 192);
             this.radLabel7.Name = "radLabel7";
-            this.radLabel7.Size = new System.Drawing.Size(115, 21);
+            this.radLabel7.Size = new System.Drawing.Size(99, 26);
             this.radLabel7.TabIndex = 22;
-            this.radLabel7.Text = "F2 : ACTUALIZAR";
+            this.radLabel7.Text = "F2 : EDITAR";
             // 
             // radLabel4
             // 
             this.radLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel4.ForeColor = System.Drawing.Color.Green;
-            this.radLabel4.Location = new System.Drawing.Point(550, 158);
+            this.radLabel4.Location = new System.Drawing.Point(531, 158);
             this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(79, 21);
+            this.radLabel4.Size = new System.Drawing.Size(98, 26);
             this.radLabel4.TabIndex = 21;
             this.radLabel4.Text = "F1 : NUEVO";
             // 
@@ -495,6 +495,25 @@
             this.radGroupBox1.Text = "Datos de Producto";
             this.radGroupBox1.ThemeName = "TelerikMetroBlue";
             // 
+            // txtOrden
+            // 
+            this.txtOrden.Location = new System.Drawing.Point(112, 179);
+            this.txtOrden.MaxLength = 20;
+            this.txtOrden.Name = "txtOrden";
+            this.txtOrden.Size = new System.Drawing.Size(84, 28);
+            this.txtOrden.TabIndex = 24;
+            this.txtOrden.Text = "0";
+            this.txtOrden.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtOrden.ThemeName = "TelerikMetroBlue";
+            // 
+            // radLabel10
+            // 
+            this.radLabel10.Location = new System.Drawing.Point(5, 181);
+            this.radLabel10.Name = "radLabel10";
+            this.radLabel10.Size = new System.Drawing.Size(116, 22);
+            this.radLabel10.TabIndex = 23;
+            this.radLabel10.Text = "Orden Impresión:";
+            // 
             // radDrop_unidad
             // 
             this.radDrop_unidad.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
@@ -504,7 +523,7 @@
             this.radDrop_unidad.Items.Add(radListDataItem2);
             this.radDrop_unidad.Location = new System.Drawing.Point(112, 141);
             this.radDrop_unidad.Name = "radDrop_unidad";
-            this.radDrop_unidad.Size = new System.Drawing.Size(116, 24);
+            this.radDrop_unidad.Size = new System.Drawing.Size(116, 28);
             this.radDrop_unidad.TabIndex = 22;
             this.radDrop_unidad.ThemeName = "TelerikMetroBlue";
             // 
@@ -512,7 +531,7 @@
             // 
             this.radLabel8.Location = new System.Drawing.Point(45, 144);
             this.radLabel8.Name = "radLabel8";
-            this.radLabel8.Size = new System.Drawing.Size(48, 18);
+            this.radLabel8.Size = new System.Drawing.Size(59, 22);
             this.radLabel8.TabIndex = 21;
             this.radLabel8.Text = "Unidad :";
             // 
@@ -545,7 +564,7 @@
             this.radText_precio.Location = new System.Drawing.Point(342, 142);
             this.radText_precio.MaxLength = 20;
             this.radText_precio.Name = "radText_precio";
-            this.radText_precio.Size = new System.Drawing.Size(84, 24);
+            this.radText_precio.Size = new System.Drawing.Size(84, 28);
             this.radText_precio.TabIndex = 11;
             this.radText_precio.Text = "0.00";
             this.radText_precio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -557,7 +576,7 @@
             // 
             this.radLabel6.Location = new System.Drawing.Point(278, 144);
             this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(43, 18);
+            this.radLabel6.Size = new System.Drawing.Size(53, 22);
             this.radLabel6.TabIndex = 10;
             this.radLabel6.Text = "Precio :";
             this.radLabel6.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -567,7 +586,7 @@
             this.radText_nombre.Location = new System.Drawing.Point(112, 104);
             this.radText_nombre.MaxLength = 254;
             this.radText_nombre.Name = "radText_nombre";
-            this.radText_nombre.Size = new System.Drawing.Size(360, 24);
+            this.radText_nombre.Size = new System.Drawing.Size(360, 28);
             this.radText_nombre.TabIndex = 9;
             this.radText_nombre.ThemeName = "TelerikMetroBlue";
             this.radText_nombre.TextChanged += new System.EventHandler(this.radText_nombre_TextChanged);
@@ -577,7 +596,7 @@
             // 
             this.radLabel5.Location = new System.Drawing.Point(42, 107);
             this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(53, 18);
+            this.radLabel5.Size = new System.Drawing.Size(66, 22);
             this.radLabel5.TabIndex = 8;
             this.radLabel5.Text = "Nombre :";
             // 
@@ -590,7 +609,7 @@
             this.radDrop_estado.Items.Add(radListDataItem4);
             this.radDrop_estado.Location = new System.Drawing.Point(342, 30);
             this.radDrop_estado.Name = "radDrop_estado";
-            this.radDrop_estado.Size = new System.Drawing.Size(116, 24);
+            this.radDrop_estado.Size = new System.Drawing.Size(116, 28);
             this.radDrop_estado.TabIndex = 5;
             this.radDrop_estado.ThemeName = "TelerikMetroBlue";
             // 
@@ -598,7 +617,7 @@
             // 
             this.radLabel3.Location = new System.Drawing.Point(278, 33);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(45, 18);
+            this.radLabel3.Size = new System.Drawing.Size(56, 22);
             this.radLabel3.TabIndex = 4;
             this.radLabel3.Text = "Estado :";
             // 
@@ -607,7 +626,7 @@
             this.radDrop_categoria.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.radDrop_categoria.Location = new System.Drawing.Point(111, 68);
             this.radDrop_categoria.Name = "radDrop_categoria";
-            this.radDrop_categoria.Size = new System.Drawing.Size(229, 24);
+            this.radDrop_categoria.Size = new System.Drawing.Size(229, 28);
             this.radDrop_categoria.TabIndex = 3;
             this.radDrop_categoria.ThemeName = "TelerikMetroBlue";
             // 
@@ -615,7 +634,7 @@
             // 
             this.radLabel2.Location = new System.Drawing.Point(41, 70);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(60, 18);
+            this.radLabel2.Size = new System.Drawing.Size(74, 22);
             this.radLabel2.TabIndex = 2;
             this.radLabel2.Text = "Categoria :";
             // 
@@ -624,7 +643,7 @@
             this.radText_cod.Location = new System.Drawing.Point(110, 33);
             this.radText_cod.Name = "radText_cod";
             this.radText_cod.ReadOnly = true;
-            this.radText_cod.Size = new System.Drawing.Size(71, 24);
+            this.radText_cod.Size = new System.Drawing.Size(71, 28);
             this.radText_cod.TabIndex = 1;
             this.radText_cod.ThemeName = "TelerikMetroBlue";
             ((Telerik.WinControls.UI.RadTextBoxElement)(this.radText_cod.GetChildAt(0))).Text = "";
@@ -637,35 +656,17 @@
             // 
             this.radLabel1.Location = new System.Drawing.Point(55, 33);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(32, 18);
+            this.radLabel1.Size = new System.Drawing.Size(39, 22);
             this.radLabel1.TabIndex = 0;
             this.radLabel1.Text = "Cod :";
             // 
-            // radLabel10
-            // 
-            this.radLabel10.Location = new System.Drawing.Point(5, 181);
-            this.radLabel10.Name = "radLabel10";
-            this.radLabel10.Size = new System.Drawing.Size(93, 18);
-            this.radLabel10.TabIndex = 23;
-            this.radLabel10.Text = "Orden Impresión:";
-            // 
-            // txtOrden
-            // 
-            this.txtOrden.Location = new System.Drawing.Point(112, 179);
-            this.txtOrden.MaxLength = 20;
-            this.txtOrden.Name = "txtOrden";
-            this.txtOrden.Size = new System.Drawing.Size(84, 24);
-            this.txtOrden.TabIndex = 24;
-            this.txtOrden.Text = "0";
-            this.txtOrden.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtOrden.ThemeName = "TelerikMetroBlue";
-            // 
             // RadFormProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1059, 514);
             this.Controls.Add(this.radPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RadFormProducto";
             // 
             // 
@@ -700,6 +701,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOrden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDrop_unidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton_cancelar)).EndInit();
@@ -714,8 +717,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radText_cod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOrden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
